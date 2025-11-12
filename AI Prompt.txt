@@ -1,0 +1,9 @@
+1) Can you make me a slick darker mode style website that I can treat as a blog? 
+   It should have a script folder with a script js file inside, and a styles folder with a style css file. 
+   Keep the information of the page as a place holder because I am going to change it.
+
+2) Can you make article sections for the following: I want an article section for "What does Bakkes Mod look like?",  
+   "What is wrong with Bakkes Mod?", "How it could be better?", and "A better Bakkes Mod interface".
+    I would also like a paragraph section inside the article under the header.
+
+3) Can you make my footer to where it is a tiny bit smaller and stick onto the bottom of the screen?
