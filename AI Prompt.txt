@@ -7,3 +7,10 @@
     I would also like a paragraph section inside the article under the header.
 
 3) Can you make my footer to where it is a tiny bit smaller and stick onto the bottom of the screen?
+
+4) Make me a place to insert a pictures.
+
+5) Make me a place to insert a youtube video, just like the pictures above.
+
+6) In this section I want to mimic making a home screen. Inside all of one div,
+ can you make me two larger buttons and then below those two I want two rows of 4 normal sized buttons.
