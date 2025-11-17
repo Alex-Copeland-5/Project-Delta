@@ -1,177 +1,313 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #e0e0e0;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 main {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 article {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: #1e1e1e;
-    border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 8px;
 }
 
 article h2 {
-    margin-top: 0;
-    color: #ffffff;
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.8rem;
 }
 
 footer {
-    font-size: 0.8rem; /* Make the text slightly smaller */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #1e1e1e; /* Optional: Add a background color */
-    text-align: center;
-    padding: 0.5rem 0; /* Adjust padding for a compact look */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  font-size: 0.8rem; /* Make the text slightly smaller */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1e1e1e; /* Optional: Add a background color */
+  text-align: center;
+  padding: 0.5rem 0; /* Adjust padding for a compact look */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 .images-style {
-    scale: 85%;
-    margin: 1rem auto;
-    text-align: center;
+  scale: 85%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/* Navigation bar styling */
+nav {
+  margin: 0;
+  padding: 0;
 }
 
 /* Updated the navigation bar to align items to the left side of the screen */
 .navbar {
-    display: flex;
-    list-style: none;
-    background: #1f1f1f;
-    color: #ffffff;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
+  display: flex;
+  list-style: none;
+  background: #1f1f1f;
+  color: #ffffff;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-item {
-    margin: 0 .5rem;
+  margin: 0 1rem;
 }
 
 .navbar-item a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.4rem;
 }
 
 .navbar-item a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .navbar-title {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 
 .navbar-description {
-    font-size: 1rem;
-    color: #b0b0b0;
+  font-size: 1rem;
+  color: #b0b0b0;
 }
 
 /* Responsive video wrapper for YouTube embeds */
 .video-wrapper {
-    position: relative;
-    width: 100%;
-    /* Increase the maximum width to make the video wider on large screens */
-    max-width: 1200px;
-    margin: 0 auto;
-    /* 16:9 aspect ratio */
-    padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+  /* Increase the maximum width to make the video wider on large screens */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Home screen dropdown for Items */
+.home-big-buttons {
+  position: relative; /* so the dropdown can be positioned absolutely below the buttons */
+}
+
+.items-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #2a2a2a;
+  border-radius: 6px;
+  padding: 0.25rem 0;
+  min-width: 160px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.items-dropdown.open {
+  display: block;
+}
+
+.items-dropdown a {
+  display: block;
+  color: #e0e0e0;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+}
+
+.items-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Nested submenu styles */
+.items-dropdown .dropdown-row {
+  position: relative; /* anchor for sub-dropdown */
+}
+
+.sub-dropdown {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #2a2a2a;
+  border-radius: 6px;
+  padding: 0.25rem 0;
+  min-width: 160px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  z-index: 1100;
+}
+
+.sub-dropdown.open {
+  display: block;
+}
+
+.sub-dropdown a {
+  display: block;
+  color: #e0e0e0;
+  padding: 0.45rem 0.75rem;
+  text-decoration: none;
+}
+
+.sub-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Preview element shown below the main items dropdown */
+.preview-below {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: transparent;
+  z-index: 1200;
+}
+.preview-below img {
+  display: block;
+  max-width: 320px;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Preview tooltip for sub-item hover */
+.preview-tooltip {
+  position: absolute;
+  display: none;
+  pointer-events: none; /* don't block hover events */
+  background: #111;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  z-index: 1200;
+  max-width: 240px;
+}
+.preview-tooltip img {
+  display: block;
+  max-width: 220px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Also open sub-dropdown on hover for pointer devices */
+.dropdown-row:hover .sub-dropdown {
+  display: block;
 }
 
 /* Home screen layout */
 .home-screen {
-    margin: 1.25rem auto;
+  margin: 1.25rem auto;
 }
 
 .home-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .home-big-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.25rem;
 }
 
 .big-btn {
-    flex: 1 1 0;
-    min-width: 180px;
-    max-width: 580px;
-    background: linear-gradient(180deg, #2f2f2f, #232323);
-    color: #ffffff;
-    border: 1px solid rgba(255,255,255,0.06);
-    padding: 1.25rem 1.5rem;
-    font-size: 1.15rem;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  flex: 1 1 0;
+  min-width: 180px;
+  max-width: 580px;
+  background: linear-gradient(180deg, #2f2f2f, #232323);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.25rem 1.5rem;
+  font-size: 1.15rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
-.big-btn:active { transform: translateY(1px); }
+.big-btn:active {
+  transform: translateY(1px);
+}
 
 .home-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
 }
 
 .grid-btn {
-    background: #262626;
-    color: #e8e8e8;
-    border: 1px solid rgba(255,255,255,0.04);
-    padding: 0.8rem 0.6rem;
-    font-size: 0.95rem;
-    border-radius: 8px;
-    cursor: pointer;
+  background: #262626;
+  color: #e8e8e8;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 0.8rem 0.6rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /* Icon styles for buttons */
 .btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.6rem;
-    vertical-align: middle;
-    color: #cfcfcf; /* sets SVG fill via currentColor */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  color: #cfcfcf; /* sets SVG fill via currentColor */
 }
 
-.btn-icon svg { width: 20px; height: 20px; display: block; fill: currentColor; }
-.big-btn .btn-icon svg { width: 26px; height: 26px; }
-.btn-label { vertical-align: middle; }
+.btn-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
+.big-btn .btn-icon svg {
+  width: 26px;
+  height: 26px;
+}
+.btn-label {
+  vertical-align: middle;
+}
 
 /* Responsive: stack big buttons on small screens and reduce grid columns */
 @media (max-width: 768px) {
-    .home-big-buttons { flex-direction: column; }
-    .home-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-big-buttons {
+    flex-direction: column;
+  }
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
-    .home-grid { grid-template-columns: repeat(1, 1fr); }
+  .home-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #ffffff;}
-
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
