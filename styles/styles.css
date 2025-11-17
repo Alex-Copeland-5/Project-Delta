@@ -8,24 +8,6 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background: #1f1f1f;
-    color: #ffffff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #b0b0b0;
-}
-
 main {
     padding: 2rem;
 }
@@ -59,7 +41,40 @@ footer {
     text-align: center;
 }
 
+/* Updated the navigation bar to align items to the left side of the screen */
+.navbar {
+    display: flex;
+    list-style: none;
+    background: #1f1f1f;
+    color: #ffffff;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
 
+.navbar-item {
+    margin: 0 .5rem;
+}
+
+.navbar-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar-item a:hover {
+    text-decoration: underline;
+}
+
+.navbar-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-description {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
 
 /* Responsive video wrapper for YouTube embeds */
 .video-wrapper {
@@ -159,3 +174,4 @@ h3 {
     text-align: center;
     margin-bottom: 1rem;
     color: #ffffff;}
+
